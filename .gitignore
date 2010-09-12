@@ -4,7 +4,7 @@
 bin
 develop-eggs
 dist
-django_notes.egg-info
+*.egg-info
 parts
 build
 static
