@@ -7,3 +7,4 @@ dist
 django_notes.egg-info
 parts
 build
+static

@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Notes List</title>
+<link href="../media/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="container">
+  <div class="content">
+  <div class="notes">
+  <form method="post" action="{% url django_notess.views.delete %}">
+    <h1>Notes</h1>
+    <input type="submit" value="Delete selected" />
+    <ul>
+      <li> <a class="title" href="{% url django_notes.views.edit %}">
+        <input type="checkbox" name="notes" value="{{ note.id }}" />
+        <span>{{ note.title }}</span></a> <span class="buttons"><a class="edit" href="#"></a><a class="delete" href="#"></a></span>
+        <div class="clear"></div>
+      </li>
+    </ul>
+    <!-- end .notes -->
+    </div>
+    <!-- end .content -->
+    </div>
+  </form>
+  <!-- end .container --></div>
+</body>
+</html>

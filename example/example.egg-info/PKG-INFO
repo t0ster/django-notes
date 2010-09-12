@@ -1,0 +1,18 @@
+Metadata-Version: 1.0
+Name: example
+Version: 0.1.0
+Summary: Template for my django applications.
+Home-page: http://github.com/t0ster/django-notes/
+Author: Roman Dolgiy
+Author-email: tosters@gmail.com
+License: New BSD License
+Description: UNKNOWN
+Keywords: django apps
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Environment :: Plugins
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

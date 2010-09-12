@@ -1,0 +1,10 @@
+{% extends "base_site.html" %}
+{% block extra_head %}
+{{ form.media }}
+{% endblock %}
+{% block content %}
+<h1>{{ form.note.title }}</h1>
+<form method="post">
+  {{ form.as_p }}
+</form>
+{% endblock %}

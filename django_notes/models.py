@@ -1,10 +1,15 @@
 from django.db import models
+from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 
-class TestModel( models.Model ):
-    name = models.CharField( _('Title'), max_length = 40, blank=True)
+class Note(models.Model):
+    title = models.CharField( _('title'), max_length = 128)
+    content = models.TextField(_('content'))
+    user = models.ForeignKey(User, verbose_name=_('user'))
+    
+    def __unicode__(self):
+        return self.title
 
     class Meta:
-        verbose_name = _('Test model')
-        verbose_name_plural = _('Test models')
-
+        verbose_name = _('note')
+        verbose_name_plural = _('notes')
