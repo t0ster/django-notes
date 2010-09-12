@@ -1,5 +1,6 @@
 import os
 
+PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 SERVE_MEDIA = DEBUG
@@ -8,7 +9,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/tmp/django_notes.db',
+        'NAME': os.path.join(PROJECT_ROOT, '../django_notes.db'),
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
@@ -20,7 +21,6 @@ LANGUAGE_CODE = 'en-us'
 SITE_ID = 1
 USE_I18N = True
 USE_L10N = True
-PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, "media")
 STATIC_ROOT = os.path.join(PROJECT_ROOT, "../static")
 STATIC_URL = "/static/"

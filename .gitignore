@@ -8,3 +8,4 @@ dist
 parts
 build
 static
+django_notes.db
