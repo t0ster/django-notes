@@ -1,7 +1,7 @@
 Introduction
 ============
 
-Short introduction of this django_ project.
+Pluggable django_ notes app.
 
 Runing Example Project
 ----------------------
@@ -21,15 +21,15 @@ Go to http://localhost:8000
 Dependencies
 ------------
 
-What is project depends on.
+django-tinymce
 
 Installation
 ------------
 
-* Add application ``django_notes`` to the ``INSTALLED_APPS`` list.
+* Add applications ``django_notes`` and ``tinymce`` to the ``INSTALLED_APPS`` list.
 * Run ``./manage.py syncdb`` to create all neccessary tables.
 * Add these variables to the settings.py::
 
-        APP_MESSAGE = 'blah minor'
+        TINYMCE_JS_URL = os.path.join(STATIC_URL, "tiny_mce/tiny_mce.js")
 
 .. _django: http://djangoproject.org

@@ -22,7 +22,7 @@ SITE_ID = 1
 USE_I18N = True
 USE_L10N = True
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, "media")
-STATIC_ROOT = os.path.join(PROJECT_ROOT, "../static")
+STATIC_ROOT = os.path.abspath(os.path.join(PROJECT_ROOT, "../static"))
 STATIC_URL = "/static/"
 MEDIA_URL = '/media/'
 ADMIN_MEDIA_PREFIX = '/media/admin/'
@@ -59,6 +59,7 @@ INSTALLED_APPS = (
 )
 
 TINYMCE_JS_URL = os.path.join(STATIC_URL, "tiny_mce/tiny_mce.js")
+TINYMCE_DEFAULT_CONFIG = {'theme': "advanced", 'relative_urls': False}
 FIXTURE_DIRS = (
     os.path.join(PROJECT_ROOT, "fixtures"),
 )

@@ -1,14 +1,15 @@
 {% extends "base_site.html" %}
+{% block title %}View Notes{% endblock %}
 {% block content %}
 <div class="notes">
 <form method="post" action="{% url django_notes.views.delete %}">
 <h1>Notes</h1>
-<input type="submit" value="Delete selected" />
+<a href="{% url django_notes.views.create %}">Create Note</a> / <input type="submit" value="Delete selected" />
 <ul>
   {% for note in object_list %}
-  <li> <a class="title" href="{% url django_notes.views.edit note.id %}">
+  <li> <a class="title" href="{{ note.get_absolute_url }}">
     <input type="checkbox" name="notes" value="{{ note.id }}" />
-    <span>{{ note.title }}</span></a> <span class="buttons"><a class="edit" href="{% url django_notes.views.edit note.id %}/"></a><a class="delete" href="{% url django_notes.views.delete note.id %}"></a></span>
+    <span>{{ note.title }}</span></a> <span class="buttons"><a class="edit" href="{{ note.get_update_url }}"></a><a class="delete" href="{{ note.get_delete_url }}"></a></span>
     <div class="clear"></div>
   </li>
   {% endfor %}
