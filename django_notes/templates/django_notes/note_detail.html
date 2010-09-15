@@ -1,8 +1,10 @@
 {% extends "base_site.html" %}
+{% load i18n %}
 {% block title %}View Note: {{ object.title }}{% endblock %}
 {% block extra_head %}
 {% endblock %}
 {% block content %}
+<p><a href="{% url django_notes.views.list %}" class="btn_a">{% trans 'Go to notes list' %}</a></p>
 <h2>{{ object.title }}</h2>
 <p>{{ object.content|safe }}</p>
 {% endblock %}

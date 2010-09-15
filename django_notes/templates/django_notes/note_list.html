@@ -2,18 +2,24 @@
 {% block title %}View Notes{% endblock %}
 {% block content %}
 <div class="notes">
-<form method="post" action="{% url django_notes.views.delete %}">
 <h1>Notes</h1>
+<form action="" method="post">{% csrf_token %}
+{{ action_form }}
+{{ formset.management_form }}
+<p>
 <a href="{% url django_notes.views.create %}">Create Note</a> / <input type="submit" value="Delete selected" />
+</p>
 <ul>
-  {% for note in object_list %}
-  <li> <a class="title" href="{{ note.get_absolute_url }}">
-    <input type="checkbox" name="notes" value="{{ note.id }}" />
-    <span>{{ note.title }}</span></a> <span class="buttons"><a class="edit" href="{{ note.get_update_url }}"></a><a class="delete" href="{{ note.get_delete_url }}"></a></span>
+  {% for form in formset.forms %}
+  {{ form.id }}
+  <li> <a class="title" href="{{ form.instance.get_absolute_url }}">
+    {{ form.is_checked }}
+    <span>{{ form.instance.title }}</span></a> <span class="buttons"><a class="edit" href="{{ form.instance.get_update_url }}"></a><a class="delete" href="{{ form.instance.get_delete_url }}"></a></span>
     <div class="clear"></div>
   </li>
   {% endfor %}
 </ul>
+</form>
 <!-- end .notes -->
 </div>
 {% endblock %}
