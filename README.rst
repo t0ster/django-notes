@@ -18,6 +18,10 @@ Runing Example Project
 	
 Go to http://localhost:8000
 
+Issue tracker
+-------------
+http://pm.bravetoasterstudio.com/projects/django-notes/issues
+
 Dependencies
 ------------
 
