@@ -38,7 +38,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'django-notes'
-copyright = u'2009, Alexander Artemenko'
+copyright = u'2010, Roman Dolgiy'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -175,7 +175,7 @@ htmlhelp_basename = 'django-notes-doc'
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
   ('index', 'django-notes.tex', u'django-notes Documentation',
-   u'Alexander Artemenko', 'manual'),
+   u'Roman Dolgiy', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
